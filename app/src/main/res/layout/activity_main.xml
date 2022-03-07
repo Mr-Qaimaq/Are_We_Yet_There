@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textProvider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_toEndOf="@id/textLabelProvider"
+        android:text="@string/dummy" />
+
+    <TextView
+        android:id="@+id/textLabelProvider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/editLocation"
+        android:layout_centerHorizontal="true"
+        android:paddingEnd="5dp"
+        android:text="@string/provider"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/textLatitude"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textLabelProvider"
+        android:layout_toEndOf="@id/textLabelLatitude"
+        android:text="@string/dummy" />
+
+    <TextView
+        android:id="@+id/textLabelLatitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textLabelProvider"
+        android:layout_alignStart="@id/editLocation"
+        android:layout_centerHorizontal="true"
+        android:paddingEnd="5dp"
+        android:text="@string/latitude"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/textLongitude"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textLabelLatitude"
+        android:layout_toEndOf="@id/textLabelLongitude"
+        android:text="@string/dummy" />
+
+    <TextView
+        android:id="@+id/textLabelLongitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textLabelLatitude"
+        android:layout_alignStart="@id/editLocation"
+        android:layout_centerHorizontal="true"
+        android:paddingEnd="5dp"
+        android:text="@string/longitude"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/textTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textLabelLongitude"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textSize="10sp"
+        android:text="@string/dummy"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:id="@+id/textDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textTo"
+        android:layout_centerHorizontal="true"
+        android:text="@string/dummy" />
+
+    <TextView
+        android:id="@+id/textNewLocLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textDistance"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textSize="15sp"
+        android:textStyle="italic"
+        android:text="@string/newloc" />
+
+    <EditText
+        android:id="@+id/editLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textNewLocLabel"
+        android:layout_centerHorizontal="true"
+        android:autofillHints="username"
+        android:ems="10"
+        android:inputType="textPostalAddress"
+        android:minHeight="48dp"
+        tools:ignore="LabelFor,SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/buttonNewLoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editLocation"
+        android:layout_alignEnd="@id/editLocation"
+        android:layout_centerHorizontal="true"
+        android:text="@string/newButton"
+        android:onClick="onNew"/>
+
+    <TextView
+        android:id="@+id/textTransport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/choose_transportation_method"
+        android:textColor="#9575CD"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textTransport"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radioButtonWalking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onWalking"
+                android:text="@string/walking" />
+
+            <RadioButton
+                android:id="@+id/radioButtonDriving"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onDriving"
+                android:text="@string/driving" />
+
+            <RadioButton
+                android:id="@+id/radioButtonBicycling"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onBicycling"
+                android:text="@string/bicycling" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:onClick="onRoute"
+            android:text="@string/route" />
+
+    </LinearLayout>
+
+</RelativeLayout>

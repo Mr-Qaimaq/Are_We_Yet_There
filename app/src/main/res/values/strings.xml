@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Are  We Yet There kalisamg</string>
+    <string name="dummy">Dummy</string>
+    <string name="provider">Provider:  </string>
+    <string name="latitude">Latitude:  </string>
+    <string name="longitude">Longitude:  </string>
+    <string name="newloc">New Location</string>
+    <string name="newButton">New</string>
+    <string name="eb2250">Engineering Building 2250</string>
+    <string name="sparty">Sparty Statue</string>
+    <string name="home">Home</string>
+    <string name="exception">Failed to communicate with geolocation services</string>
+    <string name="couldnotfind">Unable to locate address</string>
+    <string name="walking">Walking</string>
+    <string name="driving">Driving</string>
+    <string name="bicycling">Bicycling</string>
+    <string name="route">Route</string>
+    <string name="choose_transportation_method">Choose Transportation Method Below</string>
+</resources>
